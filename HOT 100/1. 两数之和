@@ -1,1 +1,21 @@
+% 通过哈希表解决
+% matlab 哈希表函数 m = containers.Map(keyset,valset) ， 函数变量应该是集合
+% isKey 检测哈希表的key是否存在
+ s = input('','s');
+ target = input('');
+%s='2 11 7 15';
+%target = 9;
+s = str2num(s);
 
+len = length(s);
+m = containers.Map(s(1),1);
+for i = 2:len
+    if ~isKey(m,target-s(i))
+        key = s(1:i);
+        loc = 1:i;
+        m = containers.Map(key,loc);
+    else
+        fprintf('%d %d',m(target-s(i)),i);
+        break
+    end
+end
