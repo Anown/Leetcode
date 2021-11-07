@@ -1,2 +1,2 @@
 # Leetcode
-Solve leetcode with Matlab code.
+Solve leetcode with c++.
